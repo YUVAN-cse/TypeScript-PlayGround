@@ -129,3 +129,4 @@ let examlple : Yuvan = {
     age: 22
 }
 
+ 
