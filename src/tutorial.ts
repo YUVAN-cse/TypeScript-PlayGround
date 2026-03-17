@@ -67,3 +67,65 @@ const logPerson2 = (person: Person) : void => {
 logPerson2(yuvan);
 
 
+//optional fields
+
+type Person2 = {
+    name: string,
+    age?: number
+}
+
+const logPerson3 = (person: Person2) : void => {
+    console.log(`${person.name} is ${person.age} years old`);
+}
+
+const yuvan2 : Person2 = {
+    name: "yuvan"
+}
+
+logPerson3(yuvan2);
+
+
+//readonly fields
+
+type Person3 = {
+    readonly name: string,
+    readonly age?: number
+}
+
+const yuvan3 : Person3 = {
+    name: "yuvan"
+}  
+
+// yuvan3.name = "yuvan2";
+
+type A = {a : number};
+type B = {b : number};
+type AB = A & B;
+
+const ab : AB = {
+    a: 1,
+    b: 2
+}
+
+interface Person4 {
+    name: string,
+    age: number
+}
+
+interface person4 extends Person4 {
+    Fname: string
+}
+
+
+let yuvan4 : person4 = {
+    name: "yuvan",
+    age: 22,
+    Fname: "yuvan"
+}
+
+
+let examlple : Yuvan = {
+    name: "yuvan",
+    age: 22
+}
+
