@@ -29,4 +29,41 @@ function calculateTax(income: number, taxYear: number = 2022): number {
     return income * 1.3;
 }
 
+let arr : number[] = [1,2,3,4,5,6,7,8,9,10];
+let arr2 : (number | string)[] = [1,2,3,4,5,6,7,8,9,10, 'yuvan'];
+
+let tuple : [number, string, boolean] = [1, "yuvan", true];
+
+
+const logPerson = (person: {name: string, age: number}) : void => {
+    console.log(`${person.name} is ${person.age} years old`);
+}
+
+
+let person : {name: string, age: number} = {
+    name: "yuvan",
+    age: 22
+}
+
+logPerson(person);
+
+//type alias
+
+type Id = number | string;
+type Person = {
+    name: string,
+    age: number
+}
+let yuvan : Person = {
+    name: "yuvan",
+    age: 22
+}   
+
+
+const logPerson2 = (person: Person) : void => {
+    console.log(`${person.name} is ${person.age} years old`);
+}
+
+logPerson2(yuvan);
+
 
